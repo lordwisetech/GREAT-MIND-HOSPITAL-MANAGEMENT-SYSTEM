@@ -17,7 +17,7 @@ function Navbar() {
         <div className="logo-icon">✚</div>
 
         <div>
-          <h2>
+          <h2 className="text-slate-700">
             Great<span>Mind</span>
           </h2>
           <small>Hospital Management</small>
@@ -27,6 +27,7 @@ function Navbar() {
       <nav className="desktop-nav">
         <NavLink to="/">Home</NavLink>
         <NavLink to="/services">Services</NavLink>
+        <NavLink to="/features">Features</NavLink>
         <NavLink to="/about">About</NavLink>
         <NavLink to="/team">Our Team</NavLink>
       </nav>
@@ -51,6 +52,10 @@ function Navbar() {
 
         <NavLink to="/services" onClick={() => setMenuOpen(false)}>
           Services
+        </NavLink>
+
+        <NavLink to="/features" onClick={() => setMenuOpen(false)}>
+          Features
         </NavLink>
 
         <NavLink to="/about" onClick={() => setMenuOpen(false)}>
