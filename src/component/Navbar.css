@@ -1,27 +1,13 @@
-
-
-
-/* =========================
-   GLOBAL MOBILE 
-========================= */
-
 * {
   box-sizing: border-box;
 }
 
-html {
-  overflow-x: hidden;
-}
-
+html,
 body {
   margin: 0;
+  padding: 0;
   overflow-x: hidden;
 }
-
-
-/* =========================
-   NAVBAR
-========================= */
 
 .navbar {
   width: 100%;
@@ -30,23 +16,19 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #ffffff;
+  background: #fff;
   border-bottom: 1px solid #edf2f7;
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 9999;
 }
 
-
-/* =========================
-   LOGO
-========================= */
+/* LOGO */
 
 .logo {
   display: flex;
   align-items: center;
   gap: 9px;
-  min-width: 0;
 }
 
 .logo-icon {
@@ -56,20 +38,16 @@ body {
   border-radius: 11px;
   background: #0b8f87;
   color: white;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   font-size: 22px;
-  font-weight: bold;
 }
 
 .logo h2 {
   margin: 0;
   font-size: 19px;
   line-height: 1;
-  white-space: nowrap;
 }
 
 .logo h2 span {
@@ -81,56 +59,92 @@ body {
   margin-top: 4px;
   color: #718096;
   font-size: 7px;
-  white-space: nowrap;
 }
 
+/* DESKTOP NAV */
 
-/* =========================
-   DESKTOP NAV
-========================= */
-
-.desktop-nav {
-  display: none;
-}
-
+.desktop-nav,
 .desktop-login {
   display: none;
 }
 
-
-/* =========================
-   HAMBURGER
-========================= */
+/* HAMBURGER */
 
 .hamburger {
   width: 42px;
   height: 42px;
   padding: 8px;
-
+  border: none;
+  background: transparent;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   gap: 5px;
-
-  background: transparent;
-  border: none;
   cursor: pointer;
 }
 
 .hamburger span {
-  width: 24px;
-  height: 2px;
+  width: 25px;
+  height: 3px;
   background: #102a43;
   border-radius: 5px;
-  transition: 0.3s ease;
+  transition: 0.3s;
 }
 
+/* MOBILE MENU */
 
-/* Hamburger animation */
+.mobile-menu {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  min-height: 250px;
+  padding: 20px 5%;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-top: 1px solid #edf2f7;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+
+  z-index: 99999;
+}
+
+.mobile-menu.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.mobile-menu a {
+  display: block;
+  width: 100%;
+  padding: 14px 5px;
+  color: #52606d;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.mobile-login {
+  margin-top: 10px;
+  padding: 12px !important;
+  text-align: center;
+  background: #0b8f87;
+  color: white !important;
+  border-radius: 8px;
+}
+
+/* HAMBURGER ANIMATION */
 
 .hamburger.active span:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
+  transform: translateY(8px) rotate(45deg);
 }
 
 .hamburger.active span:nth-child(2) {
@@ -138,75 +152,12 @@ body {
 }
 
 .hamburger.active span:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
+  transform: translateY(-8px) rotate(-45deg);
 }
 
-
-/* =========================
-   MOBILE MENU
-========================= */
-
-.mobile-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-
-  width: 100%;
-  padding: 20px 5%;
-
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-
-  background: white;
-  border-top: 1px solid #edf2f7;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
-
-  transform: translateY(-15px);
-  opacity: 0;
-  visibility: hidden;
-
-  transition: 0.3s ease;
-}
-
-.mobile-menu.open {
-  transform: translateY(0);
-  opacity: 1;
-  visibility: visible;
-}
-
-.mobile-menu a {
-  width: 100%;
-  padding: 13px 5px;
-
-  color: #52606d;
-  text-decoration: none;
-
-  font-size: 14px;
-  font-weight: 500;
-}
-
-.mobile-menu a:hover {
-  color: #0b8f87;
-}
-
-.mobile-login {
-  margin-top: 10px;
-  text-align: center;
-
-  background: #0b8f87;
-  color: white !important;
-
-  border-radius: 8px;
-}
-
-
-/* =========================
-   TABLET / DESKTOP
-========================= */
+/* DESKTOP */
 
 @media (min-width: 768px) {
-
   .navbar {
     height: 82px;
     padding: 0 7%;
@@ -214,35 +165,25 @@ body {
 
   .desktop-nav {
     display: flex;
-    align-items: center;
     gap: 35px;
   }
 
   .desktop-nav a {
     color: #52606d;
+    text-decoration: none;
     font-size: 14px;
     font-weight: 500;
-    text-decoration: none;
-    transition: 0.3s;
-  }
-
-  .desktop-nav a:hover {
-    color: #0b8f87;
   }
 
   .desktop-login {
     display: block;
-
     padding: 11px 25px;
-
     background: #0b8f87;
     color: white;
-
     border-radius: 8px;
-
+    text-decoration: none;
     font-size: 14px;
     font-weight: 600;
-    text-decoration: none;
   }
 
   .hamburger,

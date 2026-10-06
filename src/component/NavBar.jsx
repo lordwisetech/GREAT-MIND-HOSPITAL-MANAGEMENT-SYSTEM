@@ -4,12 +4,9 @@ import "./Navbar.css";
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const closeMenu = () => {
-    setMenuOpen(false);
-  };
-
   return (
     <header className="navbar">
+
       <div className="logo">
         <div className="logo-icon">✚</div>
 
@@ -21,7 +18,6 @@ function Navbar() {
         </div>
       </div>
 
-      {/* Desktop Navigation */}
       <nav className="desktop-nav">
         <a href="#home">Home</a>
         <a href="#services">Services</a>
@@ -29,33 +25,45 @@ function Navbar() {
         <a href="#team">Our Team</a>
       </nav>
 
-      {/* Desktop Login */}
-      <a href="#login" className="nav-btn desktop-login">
+      <a href="#login" className="desktop-login">
         Login
       </a>
 
-      {/* Hamburger */}
       <button
         className={`hamburger ${menuOpen ? "active" : ""}`}
         onClick={() => setMenuOpen(!menuOpen)}
-        aria-label="Toggle navigation"
       >
         <span></span>
         <span></span>
         <span></span>
       </button>
 
-      {/* Mobile Menu */}
       <nav className={`mobile-menu ${menuOpen ? "open" : ""}`}>
-        <a href="#home" onClick={closeMenu}>Home</a>
-        <a href="#services" onClick={closeMenu}>Services</a>
-        <a href="#about" onClick={closeMenu}>About</a>
-        <a href="#team" onClick={closeMenu}>Our Team</a>
+        <a href="#home" onClick={() => setMenuOpen(false)}>
+          Home
+        </a>
 
-        <a href="#login" className="mobile-login" onClick={closeMenu}>
+        <a href="#services" onClick={() => setMenuOpen(false)}>
+          Services
+        </a>
+
+        <a href="#about" onClick={() => setMenuOpen(false)}>
+          About
+        </a>
+
+        <a href="#team" onClick={() => setMenuOpen(false)}>
+          Our Team
+        </a>
+
+        <a
+          href="#login"
+          className="mobile-login"
+          onClick={() => setMenuOpen(false)}
+        >
           Login
         </a>
       </nav>
+
     </header>
   );
 }
