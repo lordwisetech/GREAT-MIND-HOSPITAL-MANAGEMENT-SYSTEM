@@ -1,12 +1,18 @@
 import { useState } from "react";
 import "./Navbar.css";
+import { NavLink, useNavigate } from "react-router-dom";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const handleLoginClick = () => {
+    navigate("/login");
+    setMenuOpen(false);
+  };
 
   return (
     <header className="navbar">
-
       <div className="logo">
         <div className="logo-icon">✚</div>
 
@@ -19,15 +25,15 @@ function Navbar() {
       </div>
 
       <nav className="desktop-nav">
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#team">Our Team</a>
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="/services">Services</NavLink>
+        <NavLink to="/about">About</NavLink>
+        <NavLink to="/team">Our Team</NavLink>
       </nav>
 
-      <a href="#login" className="desktop-login">
+      <NavLink to="/login" className="desktop-login">
         Login
-      </a>
+      </NavLink>
 
       <button
         className={`hamburger ${menuOpen ? "active" : ""}`}
@@ -39,31 +45,26 @@ function Navbar() {
       </button>
 
       <nav className={`mobile-menu ${menuOpen ? "open" : ""}`}>
-        <a href="#home" onClick={() => setMenuOpen(false)}>
+        <NavLink to="/" onClick={() => setMenuOpen(false)}>
           Home
-        </a>
+        </NavLink>
 
-        <a href="#services" onClick={() => setMenuOpen(false)}>
+        <NavLink to="/services" onClick={() => setMenuOpen(false)}>
           Services
-        </a>
+        </NavLink>
 
-        <a href="#about" onClick={() => setMenuOpen(false)}>
+        <NavLink to="/about" onClick={() => setMenuOpen(false)}>
           About
-        </a>
+        </NavLink>
 
-        <a href="#team" onClick={() => setMenuOpen(false)}>
+        <NavLink to="/team" onClick={() => setMenuOpen(false)}>
           Our Team
-        </a>
+        </NavLink>
 
-        <a
-          href="#login"
-          className="mobile-login"
-          onClick={() => setMenuOpen(false)}
-        >
+        <button className="mobile-login" onClick={handleLoginClick}>
           Login
-        </a>
+        </button>
       </nav>
-
     </header>
   );
 }

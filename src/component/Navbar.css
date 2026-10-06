@@ -139,6 +139,7 @@ body {
   background: #0b8f87;
   color: white !important;
   border-radius: 8px;
+  cursor: pointer;
 }
 
 /* HAMBURGER ANIMATION */

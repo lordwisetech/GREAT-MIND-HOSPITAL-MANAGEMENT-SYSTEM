@@ -1,22 +1,24 @@
-import Navbar from "./component/NavBar.jsx";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Features from "./component/Features.jsx";
-import './App.css'
+import "./App.css";
+import LoginPage from "./pages/loginPage.jsx";
+import AppLayout from "./component/AppLayout.jsx";
 
 function App() {
- 
-
   return (
-    <>
-      <div>
-       <Navbar/>
-       <main>
-         <Features />
-       </main>
- 
-
-      </div>  
-    </>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="*" element={<h1>404 Not Found</h1>} />
+        <Route element={<AppLayout />}>
+          <Route path="/" element={<Features />} />
+          <Route path="login" element={<LoginPage />} />
+          <Route path="services" element={<h1>Services Page</h1>} />
+          <Route path="about" element={<h1>About Page</h1>} />
+          <Route path="team" element={<h1>Our Team Page</h1>} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
