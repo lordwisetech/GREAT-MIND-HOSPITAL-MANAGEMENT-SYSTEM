@@ -1,0 +1,500 @@
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  min-height: 650px;
+  padding: 90px 7%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 70px;
+
+  background: linear-gradient(
+    135deg,
+    #f0fffd 0%,
+    #ffffff 60%,
+    #edfafa 100%
+  );
+}
+
+
+/* =========================
+   HERO CONTENT
+========================= */
+
+.hero-content {
+  max-width: 590px;
+}
+
+.badge {
+  display: inline-block;
+
+  padding: 8px 14px;
+
+  border-radius: 30px;
+
+  background: #d9f7f4;
+  color: #087f78;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  margin-bottom: 22px;
+}
+
+.hero h1 {
+  font-size: 58px;
+  line-height: 1.1;
+
+  letter-spacing: -2px;
+
+  margin-bottom: 22px;
+
+  color: #102a43;
+}
+
+.hero h1 span {
+  color: #0b8f87;
+}
+
+.hero-content > p {
+  max-width: 530px;
+
+  color: #617386;
+
+  font-size: 16px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.hero-buttons {
+  display: flex;
+
+  gap: 15px;
+
+  margin-top: 30px;
+}
+
+.primary-btn,
+.secondary-btn {
+  padding: 13px 25px;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.primary-btn {
+  background: #0b8f87;
+  color: white;
+}
+
+.secondary-btn {
+  border: 1px solid #d4dee8;
+  background: white;
+
+  color: #102a43;
+}
+
+
+/* =========================
+   STATS
+========================= */
+
+.hero-stats {
+  display: flex;
+
+  gap: 45px;
+
+  margin-top: 50px;
+}
+
+.hero-stats div {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-stats strong {
+  font-size: 22px;
+  color: #102a43;
+}
+
+.hero-stats span {
+  color: #718096;
+  font-size: 11px;
+}
+
+
+/* =========================
+   DASHBOARD CARD
+========================= */
+
+.hero-card {
+  width: 470px;
+
+  padding: 25px;
+
+  border-radius: 22px;
+
+  background: white;
+
+  border: 1px solid #edf2f7;
+
+  box-shadow:
+    0 25px 70px rgba(28, 75, 91, 0.13);
+
+  flex-shrink: 0;
+}
+
+
+/* =========================
+   CARD HEADER
+========================= */
+
+.card-top {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 20px;
+}
+
+.card-top span {
+  font-size: 11px;
+  color: #829ab1;
+}
+
+.card-top h3 {
+  font-size: 17px;
+}
+
+.online {
+  font-size: 11px;
+  color: #159957;
+}
+
+
+/* =========================
+   HEALTH CARD
+========================= */
+
+.health-card {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 17px;
+
+  background: #eafaf8;
+
+  border-radius: 14px;
+
+  margin-bottom: 15px;
+}
+
+.heart {
+  width: 45px;
+  height: 45px;
+
+  flex-shrink: 0;
+
+  background: #0b8f87;
+
+  color: white;
+
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 25px;
+}
+
+.health-card small {
+  font-size: 10px;
+  color: #718096;
+}
+
+.health-card h3 {
+  font-size: 14px;
+}
+
+
+/* =========================
+   DASHBOARD GRID
+========================= */
+
+.dashboard-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 12px;
+}
+
+.mini-card {
+  padding: 15px;
+
+  border: 1px solid #edf2f7;
+
+  border-radius: 12px;
+}
+
+.mini-card span,
+.mini-card small {
+  display: block;
+
+  font-size: 10px;
+
+  color: #829ab1;
+}
+
+.mini-card strong {
+  display: block;
+
+  font-size: 23px;
+
+  margin: 3px 0;
+}
+
+
+/* =========================
+   APPOINTMENT
+========================= */
+
+.appointment {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-top: 15px;
+
+  padding-top: 15px;
+
+  border-top: 1px solid #edf2f7;
+}
+
+.doctor-avatar {
+  width: 42px;
+  height: 42px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #dceff0;
+
+  color: #0b8f87;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.appointment > div:nth-child(2) {
+  flex: 1;
+
+  min-width: 0;
+}
+
+.appointment strong,
+.appointment span {
+  display: block;
+}
+
+.appointment strong {
+  font-size: 12px;
+}
+
+.appointment span {
+  font-size: 10px;
+  color: #829ab1;
+}
+
+.appointment button {
+  padding: 7px 12px;
+
+  background: #edfafa;
+
+  color: #0b8f87;
+
+  border-radius: 6px;
+
+  font-size: 10px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1100px) {
+
+  .hero {
+    gap: 40px;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .hero-card {
+    width: 430px;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 850px) {
+
+  .hero {
+    min-height: auto;
+
+    padding: 70px 5%;
+
+    flex-direction: column;
+
+    text-align: center;
+
+    gap: 55px;
+  }
+
+  .hero-content {
+    width: 100%;
+    max-width: 650px;
+  }
+
+  .hero h1 {
+    font-size: 44px;
+  }
+
+  .hero-content > p {
+    margin: 0 auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-stats {
+    justify-content: center;
+  }
+
+  .hero-card {
+    width: 100%;
+    max-width: 470px;
+
+    text-align: left;
+  }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 500px) {
+
+  .hero {
+    padding: 55px 5%;
+    gap: 45px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+
+    letter-spacing: -1.5px;
+  }
+
+  .hero-content > p {
+    font-size: 14px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    width: 100%;
+
+    text-align: center;
+  }
+
+  .hero-stats {
+    gap: 25px;
+  }
+
+  .hero-stats strong {
+    font-size: 19px;
+  }
+
+  .hero-stats span {
+    font-size: 9px;
+  }
+
+  .hero-card {
+    padding: 18px;
+
+    border-radius: 18px;
+  }
+
+  .card-top h3 {
+    font-size: 15px;
+  }
+
+  .mini-card {
+    padding: 12px;
+  }
+
+  .mini-card strong {
+    font-size: 20px;
+  }
+
+}
+
+
+/* =========================
+   VERY SMALL PHONES
+========================= */
+
+@media (max-width: 360px) {
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero-stats {
+    gap: 15px;
+  }
+
+  .hero-stats span {
+    font-size: 8px;
+  }
+
+}
