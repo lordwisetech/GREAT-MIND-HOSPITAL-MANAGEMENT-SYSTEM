@@ -1,4 +1,5 @@
 import Navbar from "./component/NavBar.jsx";
+import Features from "./component/Features.jsx";
 import './App.css'
 
 function App() {
@@ -8,6 +9,9 @@ function App() {
     <>
       <div>
        <Navbar/>
+       <main>
+         <Features />
+       </main>
  
 
       </div>  
