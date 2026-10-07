@@ -189,6 +189,7 @@ body {
     font-weight: 600;
   }
 
+  /*  FIXED HERE: Added opening brace '{' */
   .hamburger,
   .mobile-menu {
     display: none;
