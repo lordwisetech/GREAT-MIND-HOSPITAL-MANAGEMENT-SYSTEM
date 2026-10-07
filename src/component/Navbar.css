@@ -16,7 +16,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #fff;
+  background: #beeeec;
+  
   border-bottom: 1px solid #edf2f7;
   position: sticky;
   top: 0;
@@ -48,6 +49,7 @@ body {
   margin: 0;
   font-size: 19px;
   line-height: 1;
+  color: #01110e;
 }
 
 .logo h2 span {

@@ -1,13 +1,13 @@
-import "./Hero.css";
+import styles from "./Hero.module.css";
 
 function Hero() {
   return (
-    <section className="hero" id="home">
+    <section className={styles.hero} id="home">
 
       {/* LEFT CONTENT */}
-      <div className="hero-content">
+      <div className={styles['hero-content']}>
 
-        <div className="badge">
+        <div className={styles.badge}>
           ● Smart Healthcare Management
         </div>
 
@@ -23,17 +23,17 @@ function Hero() {
           secure platform.
         </p>
 
-        <div className="hero-buttons">
-          <a href="#login" className="primary-btn">
+        <div className={styles['hero-buttons']}>
+          <a href="#login" className={styles['primary-btn']}>
             Get Started →
           </a>
 
-          <a href="#about" className="secondary-btn">
+          <a href="#about" className={styles['secondary-btn']}>
             Learn More
           </a>
         </div>
 
-        <div className="hero-stats">
+        <div className={styles['hero-stats']}>
 
           <div>
             <strong>24/7</strong>
@@ -55,24 +55,24 @@ function Hero() {
 
 
       {/* RIGHT DASHBOARD */}
-      <div className="hero-card">
+      <div className={styles['hero-card']}>
 
-        <div className="card-top">
+        <div className={styles['card-top']}>
           <div>
             <span>Today's Overview</span>
             <h3>Hospital Dashboard</h3>
           </div>
 
-          <div className="online">
+          <div className={styles.online}>
             ● Live
           </div>
         </div>
 
 
         {/* HEALTH STATUS */}
-        <div className="health-card">
+        <div className={styles['health-card']}>
 
-          <div className="heart">
+          <div className={styles.heart}>
             ♡
           </div>
 
@@ -85,27 +85,27 @@ function Hero() {
 
 
         {/* DASHBOARD NUMBERS */}
-        <div className="dashboard-grid">
+        <div className={styles['dashboard-grid']}>
 
-          <div className="mini-card">
+          <div className={styles['mini-card']}>
             <span>Patients</span>
             <strong>248</strong>
             <small>+12 today</small>
           </div>
 
-          <div className="mini-card">
+          <div className={styles['mini-card']}>
             <span>Doctors</span>
             <strong>36</strong>
             <small>Available</small>
           </div>
 
-          <div className="mini-card">
+          <div className={styles['mini-card']}>
             <span>Appointments</span>
             <strong>84</strong>
             <small>Today</small>
           </div>
 
-          <div className="mini-card">
+          <div className={styles['mini-card']}>
             <span>Emergencies</span>
             <strong>07</strong>
             <small>Active</small>
@@ -115,9 +115,9 @@ function Hero() {
 
 
         {/* APPOINTMENT */}
-        <div className="appointment">
+        <div className={styles.appointment}>
 
-          <div className="doctor-avatar">
+          <div className={styles['doctor-avatar']}>
             DR
           </div>
 

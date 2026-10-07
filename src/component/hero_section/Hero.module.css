@@ -174,6 +174,7 @@
 
 .card-top h3 {
   font-size: 17px;
+  color: #02504c;
 }
 
 .online {
@@ -228,6 +229,7 @@
 
 .health-card h3 {
   font-size: 14px;
+  color: #0b8f87;
 }
 
 
@@ -264,7 +266,7 @@
   display: block;
 
   font-size: 23px;
-
+color: #0b8f87;
   margin: 3px 0;
 }
 
@@ -316,10 +318,12 @@
 .appointment strong,
 .appointment span {
   display: block;
+  color: #0b8f87;
 }
 
 .appointment strong {
   font-size: 12px;
+  color: #0b8f87;
 }
 
 .appointment span {
@@ -466,6 +470,7 @@
 
   .card-top h3 {
     font-size: 15px;
+    color: #0b8f87;
   }
 
   .mini-card {
@@ -474,6 +479,7 @@
 
   .mini-card strong {
     font-size: 20px;
+    color: #0b8f87;
   }
 
 }

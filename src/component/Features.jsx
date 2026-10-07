@@ -1,4 +1,4 @@
-import './Features.css';
+import styles from './Features.module.css';
 
 const features = [
   {
@@ -36,30 +36,30 @@ const features = [
 
 export default function Features() {
   return (
-    <section className="features" id="services" aria-labelledby="features-heading">
-      <div className="features__container">
-        <div className="features__intro">
-          <p className="features__eyebrow">Our features</p>
+    <section className={styles.features} id="services" aria-labelledby="features-heading">
+      <div className={styles.features__container}>
+        <div className={styles.features__intro}>
+          <p className={styles.features__eyebrow}>Our features</p>
           <h2 id="features-heading">Everything You Need in One Place</h2>
-          <p className="features__summary">
+          <p className={styles.features__summary}>
             From the front desk to the ward, GreatMind brings essential hospital
             workflows together—built for the realities of care in Nigeria.
           </p>
         </div>
 
-        <ul className="features__grid">
+        <ul className={styles.features__grid}>
           {features.map(({ title, description, icon, featured }) => (
             <li
-              className={`features__card${featured ? ' features__card--featured' : ''}`}
+              className={`${styles.features__card} ${featured ? styles['features__card--featured'] : ''}`}
               key={title}
             >
-              <div className="features__card-top">
-                <span className="features__icon">
+              <div className={styles['features__card-top']}>
+                <span className={styles.features__icon}>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
                     <path d={icon} />
                   </svg>
                 </span>
-                {featured && <span className="features__badge">Core feature</span>}
+                {featured && <span className={styles.features__badge}>Core feature</span>}
               </div>
               <h3>{title}</h3>
               <p>{description}</p>
