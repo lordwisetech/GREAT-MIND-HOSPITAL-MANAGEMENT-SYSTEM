@@ -3,7 +3,8 @@ import Features from "./component/Features.jsx";
 import "./App.css";
 import LoginPage from "./pages/loginPage.jsx";
 import AppLayout from "./component/AppLayout.jsx";
-import Hero from "./component/hero_section/hero.jsx";
+import Landing_page from './component/Landing_page.jsx';
+
 
 
 function App() {
@@ -12,7 +13,9 @@ function App() {
       <Routes>
         <Route path="*" element={<h1>404 Not Found</h1>} />
         <Route element={<AppLayout />}>
-          <Route path="/" element={<Features />} />
+
+          <Route path="services" element={<Features />} />
+          <Route path="/" element={<Landing_page />} />
           <Route path="login" element={<LoginPage />} />
           <Route path="features" element={<Features />} />
           <Route path="services" element={<h1>Services Page</h1>} />
