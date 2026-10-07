@@ -3,7 +3,7 @@ import Features from "./component/Features.jsx";
 import "./App.css";
 import LoginPage from "./pages/loginPage.jsx";
 import AppLayout from "./component/AppLayout.jsx";
-import Landing_page from './component/Landing_page.jsx';
+import Landing_page from "./component/Landing_page.jsx";
 
 
 
