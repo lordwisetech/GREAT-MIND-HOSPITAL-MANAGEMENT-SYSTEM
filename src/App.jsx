@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Features from "./component/Features.jsx";
+import AboutSection from "./component/AboutSection.jsx";
 import "./App.css";
 import LoginPage from "./pages/loginPage.jsx";
 import AppLayout from "./component/AppLayout.jsx";
@@ -19,7 +20,7 @@ function App() {
           <Route path="login" element={<LoginPage />} />
           <Route path="features" element={<Features />} />
           <Route path="services" element={<h1>Services Page</h1>} />
-          <Route path="about" element={<h1>About Page</h1>} />
+          <Route path="about" element={<AboutSection />} />
           <Route path="team" element={<h1>Our Team Page</h1>} />
         </Route>
       </Routes>
